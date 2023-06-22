@@ -1,0 +1,43 @@
+.header {
+    background: url('../images/Imagem\ de\ fundo.png');
+    position: relative;
+    height: 70vh;
+
+    &.sm {
+        height: 30vh;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-top: 1.2rem;
+
+        nav {
+            margin-left: auto;
+
+            a {
+                color: $color;
+                text-align: center;
+                font-size: 1.2rem;
+                padding: .3rem 1rem;
+                background: rgba(0, 0, 0, 0.8);
+                border-radius: $border;
+
+                &:hover {
+                    background: rgba(0, 0, 0, 1);
+                }
+            }
+        }
+
+        .logo {
+            position: absolute;
+            padding: .5rem 4rem;
+            font-size: 2.4rem;
+            font-weight: 700;
+            background: $background;
+            border-radius: $border $border 0 0;
+            bottom: 0;
+        }
+    }
+}
