@@ -140,7 +140,7 @@ body {
 .container {
   max-width: 1280px;
   margin: 0 auto;
-  width: 90%;
+  width: 100%;
 }
 
 h2 {
@@ -161,10 +161,52 @@ main {
 .header.sm {
   height: 30vh;
 }
+.header .mobile-button {
+  display: none;
+  background: rgba(0, 0, 0, 0.8);
+  font-size: 1.2rem;
+  font-size: 1.4rem;
+  color: #f5f5f5;
+  padding: 0.3rem;
+  margin: 0.4rem 0.4rem 0 auto;
+}
+.header .mobile-button:hover {
+  background: rgb(0, 0, 0);
+}
+@media (max-width: 768px) {
+  .header {
+    height: 20vh;
+  }
+  .header .container {
+    justify-content: center;
+    padding-top: 0 !important;
+  }
+  .header .mobile-button {
+    display: flex;
+    color: #f5f5f5;
+  }
+  .header nav {
+    margin-left: initial;
+    width: 100%;
+  }
+  .header nav .menu {
+    position: absolute;
+    flex-direction: column;
+    pointer-events: none;
+    background: #f5f5f5;
+    transform: translateX(100%);
+    opacity: 0;
+    gap: 0.25rem;
+  }
+  .header nav .menu.active {
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: all;
+    transition: all 0.3s ease;
+  }
+}
 .header .container {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   padding-top: 1.2rem;
 }
 .header .container nav {
@@ -200,9 +242,22 @@ main section.paragraph {
   font-size: 1.2rem;
   font-style: italic;
 }
+@media (max-width: 768px) {
+  main section.paragraph {
+    padding: 1rem;
+  }
+}
 main section.hero-section {
   display: flex;
   margin-top: 4rem;
+}
+@media (max-width: 768px) {
+  main section.hero-section {
+    flex-direction: column;
+  }
+  main section.hero-section > div {
+    padding: 0 0.5rem;
+  }
 }
 main section.hero-section > div {
   flex: 1;
@@ -216,7 +271,13 @@ main section.hero-section .text-container {
   width: 100%;
   height: 100%;
 }
+@media (max-width: 768px) {
+  main section.hero-section .text-container {
+    padding: 1rem;
+  }
+}
 main section.hero-section .text-container h2 {
+  margin-bottom: 1rem;
   font-size: 2rem;
   font-weight: bold;
   color: #3AAA38;
@@ -225,7 +286,7 @@ main section.hero-section .text-container p {
   font-size: 1rem;
 }
 main section.hero-section .text-container p:not(:last-child) {
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem;
 }
 main section.institutions {
   text-align: center;
@@ -240,6 +301,11 @@ main section.institutions .card-group {
   grid-template-columns: repeat(auto-fill, minmax(305px, 1fr));
   gap: 1.2rem;
 }
+@media (max-width: 768px) {
+  main section.institutions .card-group {
+    padding: 1rem;
+  }
+}
 main section.institutions .card-group .card {
   background-color: #fff;
   border-radius: 4px;
@@ -247,6 +313,9 @@ main section.institutions .card-group .card {
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.015);
   padding: 0.2rem;
   transition: 0.5s ease;
+}
+main section.institutions .card-group .card img {
+  width: 100%;
 }
 main section.institutions .card-group .card:hover {
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
@@ -278,4 +347,15 @@ main section.institutions .card-group .card div .contact-item {
   border-radius: 4px;
   width: 1280px;
   height: 720px;
+}
+
+body {
+  animation: fade 0.6s ease-in forwards;
+  opacity: 0;
+}
+
+@keyframes fade {
+  to {
+    opacity: 1;
+  }
 }

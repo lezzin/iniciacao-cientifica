@@ -1,1 +1,12 @@
 @import 'base', 'components/header', 'pages/index', 'pages/map';
+
+body {
+    animation: fade .6s ease-in forwards;
+    opacity: 0;
+}
+
+@keyframes fade {
+    to {
+        opacity: 1;
+    }
+}

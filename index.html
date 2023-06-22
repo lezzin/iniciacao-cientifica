@@ -12,11 +12,21 @@
     <header class="header">
         <div class="container">
             <nav>
-                <a href="index.html">Inicio</a>
-                <a href="map.html">Mapa</a>
-                <a href="#">Galeria</a>
-                <a href="#">Artigo</a>
-                <a href="#">Livros</a>
+                <button class="mobile-button" id="mobile-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-list" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                    </svg>
+                </button>
+
+                <div class="menu">
+                    <a href="index.html">Inicio</a>
+                    <a href="map.html">Mapa</a>
+                    <a href="#">Galeria</a>
+                    <a href="#">Artigo</a>
+                    <a href="#">Livros</a>
+                </div>
             </nav>
 
             <div class="logo">Logo</div>
@@ -35,7 +45,7 @@
 
             <section class="hero-section">
                 <div class="side-image">
-                    <img src="./images/Side image.png" alt="">
+                    <img src="./images/Side image.png" alt="" loading="lazy">
                 </div>
                 <div class="text-container">
                     <h2>Cursus risus at</h2>
@@ -60,7 +70,7 @@
 
                 <div class="card-group">
                     <div class="card">
-                        <img src="./images/Card image.png" alt="" class="card-image">
+                        <img src="./images/Card image.png" alt="" class="card-image" loading="lazy">
 
                         <div>
                             <h3 class="institution-name">Instituto Federal</h3>
@@ -69,7 +79,7 @@
                         </div>
                     </div>
                     <div class="card">
-                        <img src="./images/Card image.png" alt="" class="card-image">
+                        <img src="./images/Card image.png" alt="" class="card-image" loading="lazy">
 
                         <div>
                             <h3 class="institution-name">Instituto Federal</h3>
@@ -78,7 +88,7 @@
                         </div>
                     </div>
                     <div class="card">
-                        <img src="./images/Card image.png" alt="" class="card-image">
+                        <img src="./images/Card image.png" alt="" class="card-image" loading="lazy">
 
                         <div>
                             <h3 class="institution-name">Instituto Federal</h3>
@@ -87,7 +97,7 @@
                         </div>
                     </div>
                     <div class="card">
-                        <img src="./images/Card image.png" alt="" class="card-image">
+                        <img src="./images/Card image.png" alt="" class="card-image" loading="lazy">
 
                         <div>
                             <h3 class="institution-name">Instituto Federal</h3>
@@ -99,6 +109,8 @@
             </section>
         </div>
     </main>
+
+    <script src="./js/script.js"></script>
 </body>
 </div>
 

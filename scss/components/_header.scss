@@ -7,10 +7,58 @@
         height: 30vh;
     }
 
+    .mobile-button {
+        display: none;
+        background: rgba(0, 0, 0, 0.8);
+        font-size: 1.2rem;
+        font-size: 1.4rem;
+        color: $color;
+        padding: .3rem;
+        margin: .4rem .4rem 0 auto;
+
+        &:hover {
+            background: rgba(0, 0, 0, 1);
+        }
+    }
+
+    @media (max-width: 768px) {
+        height: 20vh;
+
+        .container {
+            justify-content: center;
+            padding-top: 0 !important;
+        }
+
+        .mobile-button {
+            display: flex;
+            color: $color;
+        }
+
+        nav {
+            margin-left: initial;
+            width: 100%;
+
+            .menu {
+                position: absolute;
+                flex-direction: column;
+                pointer-events: none;
+                background: $color;
+                transform: translateX(100%);
+                opacity: 0;
+                gap: .25rem;
+
+                &.active {
+                    opacity: 1;
+                    transform: translateX(0);
+                    pointer-events: all;
+                    transition: all .3s ease;
+                }
+            }
+        }
+    }
+
     .container {
         display: flex;
-        flex-direction: column;
-        justify-content: space-between;
         padding-top: 1.2rem;
 
         nav {
