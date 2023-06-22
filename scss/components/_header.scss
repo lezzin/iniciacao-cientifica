@@ -23,6 +23,7 @@
 
     @media (max-width: 768px) {
         height: 20vh;
+        overflow-x: hidden;
 
         .container {
             justify-content: center;
