@@ -275,7 +275,7 @@ main section.institutions .card-group .card div .contact-item {
 }
 .map-container #map {
   background-color: #000;
-  border: 4px;
+  border-radius: 4px;
   width: 1280px;
   height: 720px;
 }
