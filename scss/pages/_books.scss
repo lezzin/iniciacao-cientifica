@@ -6,41 +6,49 @@
 
     &_book {
         position: relative;
-        perspective: 1000px;
         aspect-ratio: 3/4;
+        overflow: hidden;
 
-        &:hover {
-            & .front {
-                transform: rotateY(180deg);
-            }
-
-            & .back {
-                transform: rotateY(360deg);
-            }
-        }
-
-        .front,
-        .back {
+        img {
             position: absolute;
-            background: $secondary-background;
-            border-radius: $border;
-            backface-visibility: hidden;
-            transition: all .9s;
+            object-fit: cover;
+            transition: .2s ease-out;
             height: 100%;
             width: 100%;
         }
 
-        .back {
-            transform: rotateY(180deg);
+        .book_content {
+            position: absolute;
             display: flex;
+            justify-content: center;
             flex-direction: column;
             padding: 1rem;
+            background: $green;
+            transition: .2s ease-out;
+            backdrop-filter: blur(5px);
+            width: 100%;
+            transform: translateY(100%);
+            color: $color;
+            opacity: 0;
+            bottom: 0;
+
+            h4 {
+                font-size: 1.2rem;
+                font-weight: 600;
+            }
 
             p {
-                margin: 0;
-                font-size: 1.2rem;
-                font-weight: normal;
+                font-size: 1rem;
             }
+        }
+
+        &:hover .book_content {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        &:hover img {
+            filter: brightness(60%);
         }
     }
 }
