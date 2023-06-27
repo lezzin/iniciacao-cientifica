@@ -1,7 +1,6 @@
 .books {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(197px, 1fr));
-    place-items: center;
     margin-top: 1.5rem;
     gap: .6rem;
 
