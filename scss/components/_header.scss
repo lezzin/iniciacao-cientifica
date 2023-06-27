@@ -41,6 +41,7 @@
             a {
                 color: $color;
                 text-align: center;
+                padding: .3rem 1rem;
                 font-size: 1.2rem;
                 background: rgba(0, 0, 0, 0.8);
                 border-radius: $border;
@@ -51,7 +52,6 @@
 
                 @media (max-width:768px) {
                     padding: .3rem .3rem;
-
                 }
             }
         }
