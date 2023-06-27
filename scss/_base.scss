@@ -8,10 +8,6 @@ $green: #3AAA38;
 $background: #f5f5f5;
 $secondary-background: #fff;
 
-$w: 1280px;
-$w-2: 1080px;
-$w-3: 720;
-
 $border: 4px;
 
 body {
@@ -29,21 +25,17 @@ body {
 
 .container {
     margin: 0 auto;
-    padding: 1rem;
+    padding: 1rem 1rem 4rem 1rem;
     width: 90%;
 
     @media (max-width: 768px) {
+        width: 100%;
         font-size: 14px;
-        max-width: $w-3;
     }
 
     @media (min-width: 1200px) {
         font-size: 18px;
-        max-width: $w-2;
-    }
-
-    @media (max-width: 1280px) {
-        max-width: $w;
+        max-width: 1080px;
     }
 }
 

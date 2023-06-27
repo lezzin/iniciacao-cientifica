@@ -31,16 +31,27 @@
         nav {
             margin-left: auto;
 
+            @media (max-width:768px) {
+                display: flex;
+                justify-content: center;
+                margin-left: unset;
+                width: 100%;
+            }
+
             a {
                 color: $color;
                 text-align: center;
                 font-size: 1.2rem;
-                padding: .3rem 1rem;
                 background: rgba(0, 0, 0, 0.8);
                 border-radius: $border;
 
                 &:hover {
                     background: rgba(0, 0, 0, 1);
+                }
+
+                @media (max-width:768px) {
+                    padding: .3rem .3rem;
+
                 }
             }
         }
@@ -53,6 +64,12 @@
             background: $background;
             border-radius: $border $border 0 0;
             bottom: 0;
+
+            @media (max-width: 768px) {
+                left: 50%;
+                transform: translateX(-50%);
+                font-size: 2.2rem;
+            }
         }
     }
 }
