@@ -1,61 +1,27 @@
 .header {
     background: url('../images/Imagem\ de\ fundo.png');
     position: relative;
+    overflow: hidden;
     height: 70vh;
+
+    .overlay {
+        position: absolute;
+        animation: fade-out 3s forwards ease-out;
+        pointer-events: none;
+        filter: blur(5px);
+        opacity: 1;
+        left: 0;
+        top: 0;
+    }
+
+    @keyframes fade-out {
+        to {
+            opacity: 0;
+        }
+    }
 
     &.sm {
         height: 30vh;
-    }
-
-    .mobile-button {
-        display: none;
-        background: rgba(0, 0, 0, 0.8);
-        font-size: 1.2rem;
-        font-size: 1.4rem;
-        color: $color;
-        padding: .3rem;
-        margin: .4rem .4rem 0 auto;
-
-        &:hover {
-            background: rgba(0, 0, 0, 1);
-        }
-    }
-
-    @media (max-width: 768px) {
-        height: 20vh;
-        overflow-x: hidden;
-
-        .container {
-            justify-content: center;
-            padding-top: 0 !important;
-        }
-
-        .mobile-button {
-            display: flex;
-            color: $color;
-        }
-
-        nav {
-            margin-left: initial;
-            width: 100%;
-
-            .menu {
-                position: absolute;
-                flex-direction: column;
-                pointer-events: none;
-                background: $color;
-                transform: translateX(100%);
-                opacity: 0;
-                gap: .25rem;
-
-                &.active {
-                    opacity: 1;
-                    transform: translateX(0);
-                    pointer-events: all;
-                    transition: all .3s ease;
-                }
-            }
-        }
     }
 
     .container {

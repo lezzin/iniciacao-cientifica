@@ -1,4 +1,10 @@
-@import 'base', 'components/header', 'pages/index', 'pages/map';
+@import 'base',
+'components/header',
+'pages/index',
+'pages/map',
+'pages/articles',
+'pages/books',
+'pages/gallery';
 
 body {
     animation: fade .6s ease-in forwards;

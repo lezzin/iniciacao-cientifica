@@ -5,20 +5,46 @@ $color: #f5f5f5;
 $secondary-color: #999;
 $green: #3AAA38;
 
-$background : #f5f5f5;
-$secondary-background : #fff;
+$background: #f5f5f5;
+$secondary-background: #fff;
+
+$w: 1280px;
+$w-2: 1080px;
+$w-3: 720;
 
 $border: 4px;
 
 body {
     font-family: 'Mulish', sans-serif;
-    font-size: 62.5%;
+    font-size: 16px;
+
+    @media (max-width: 768px) {
+        font-size: 14px;
+    }
+
+    @media (min-width: 1200px) {
+        font-size: 18px;
+    }
 }
 
 .container {
-    max-width: 1280px;
     margin: 0 auto;
-    width: 100%;
+    padding: 1rem;
+    width: 90%;
+
+    @media (max-width: 768px) {
+        font-size: 14px;
+        max-width: $w-3;
+    }
+
+    @media (min-width: 1200px) {
+        font-size: 18px;
+        max-width: $w-2;
+    }
+
+    @media (max-width: 1280px) {
+        max-width: $w;
+    }
 }
 
 h2 {
@@ -27,6 +53,21 @@ h2 {
     color: $green;
 }
 
+h2.centered {
+    text-align: center;
+}
+
 main {
     background: $background;
+}
+
+section.paragraph {
+    padding: 1rem 6.5rem;
+    color: $secondary-color;
+    font-size: 1.2rem;
+    font-style: italic;
+
+    @media (max-width: 768px) {
+        padding: 1rem;
+    }
 }

@@ -1,0 +1,46 @@
+.books {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(197px, 1fr));
+    margin-top: 1.5rem;
+    gap: .6rem;
+
+    &_book {
+        position: relative;
+        perspective: 1000px;
+        aspect-ratio: 3/4;
+
+        &:hover {
+            & .front {
+                transform: rotateY(180deg);
+            }
+
+            & .back {
+                transform: rotateY(360deg);
+            }
+        }
+
+        .front,
+        .back {
+            position: absolute;
+            background: $secondary-background;
+            border-radius: $border;
+            backface-visibility: hidden;
+            transition: all .9s;
+            height: 100%;
+            width: 100%;
+        }
+
+        .back {
+            transform: rotateY(180deg);
+            display: flex;
+            flex-direction: column;
+            padding: 1rem;
+
+            p {
+                margin: 0;
+                font-size: 1.2rem;
+                font-weight: normal;
+            }
+        }
+    }
+}

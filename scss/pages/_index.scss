@@ -2,17 +2,6 @@ main {
     section {
         width: 100%;
 
-        &.paragraph {
-            padding: 1rem 6.5rem;
-            color: $secondary-color;
-            font-size: 1.2rem;
-            font-style: italic;
-
-            @media (max-width: 768px) {
-                padding: 1rem;
-            }
-        }
-
         &.hero-section {
             display: flex;
             margin-top: 4rem;
