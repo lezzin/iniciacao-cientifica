@@ -4,6 +4,8 @@ main {
 
         &.hero-section {
             display: flex;
+            justify-content: center;
+            align-items: center;
             margin-top: 4rem;
 
             @media (max-width: 768px) {
@@ -16,6 +18,13 @@ main {
 
             >div {
                 flex: 1;
+            }
+
+            .side-image {
+                img {
+                    object-fit: cover;
+                    height: 100%;
+                }
             }
 
             .text-container {

@@ -1,18 +1,42 @@
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    place-items: center;
     margin-top: 1.5rem;
     gap: .6rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 200px;
+    grid-auto-flow: dense;
 
-    &_column {
+    &_item {
         display: flex;
-        flex-direction: column;
-        gap: .6rem;
+        justify-content: center;
+        align-items: center;
+
+        &:hover>img {
+            opacity: 1;
+        }
+
+        &.wide {
+            grid-column: span 2;
+        }
+
+        &.tall {
+            grid-row: span 2;
+        }
+
+        &.big {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
     }
 
     &_image {
-        display: block;
         width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: inline-block;
+        vertical-align: middle;
+        border-radius: $border;
+        opacity: .93;
+        transition: opacity .3s ease;
     }
 }

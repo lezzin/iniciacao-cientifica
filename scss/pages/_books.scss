@@ -6,49 +6,40 @@
 
     &_book {
         position: relative;
-        aspect-ratio: 3/4;
+        border-radius: $border;
         overflow: hidden;
+        box-shadow: 0px 0px 15px rgb(0 0 0 / 0.015);
+        transition: .5s ease;
+
+        &:hover {
+            box-shadow: 0px 0px 15px rgb(0 0 0 / 0.15);
+
+            img {
+                transform: scale(1.01);
+            }
+
+            .text {
+                transform: translateY(0);
+            }
+        }
 
         img {
-            position: absolute;
-            object-fit: cover;
-            transition: .2s ease-out;
+            width: 100%;
             height: 100%;
-            width: 100%;
+            object-fit: cover;
+            transition: .3s ease-in-out;
         }
 
-        .book_content {
+        .text {
             position: absolute;
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-            padding: 1rem;
-            background: $green;
-            transition: .2s ease-out;
-            backdrop-filter: blur(5px);
-            width: 100%;
             transform: translateY(100%);
-            color: $color;
-            opacity: 0;
             bottom: 0;
-
-            h4 {
-                font-size: 1.2rem;
-                font-weight: 600;
-            }
-
-            p {
-                font-size: 1rem;
-            }
-        }
-
-        &:hover .book_content {
-            transform: translateY(0);
-            opacity: 1;
-        }
-
-        &:hover img {
-            filter: brightness(60%);
+            width: 100%;
+            color: $color;
+            text-align: center;
+            padding: .5rem;
+            transition: .3s ease-in-out;
+            background: linear-gradient(#ffffff00, rgb(0 0 0 / 0.8));
         }
     }
 }
