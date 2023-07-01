@@ -10,7 +10,21 @@ $secondary-background: #fff;
 
 $border: 4px;
 
+@keyframes fade {
+    to {
+        opacity: 1;
+    }
+}
+
+html,
 body {
+    scroll-behavior: smooth;
+}
+
+body {
+    opacity: 0;
+    animation: fade 1s ease-in forwards;
+    background: url('../images/Imagem\ de\ fundo.png') no-repeat fixed;
     font-family: 'Mulish', sans-serif;
     font-size: 16px;
 
@@ -23,14 +37,28 @@ body {
     }
 }
 
+.bg {
+    background-color: $background;
+}
+
+main {
+    background: rgb(0, 0, 0);
+    background: linear-gradient(rgba(0, 0, 0, 0) 0%, rgb(0 0 0 / 0.6) 20%);
+    padding-bottom: 3rem;
+
+    @media (max-width: 768px) {
+        padding-bottom: unset;
+    }
+}
+
 .container {
     margin: 0 auto;
-    padding: 1rem 1rem 4rem 1rem;
+    padding: 1rem;
     width: 90%;
 
     @media (max-width: 768px) {
-        width: 100%;
         font-size: 14px;
+        width: 100%;
     }
 
     @media (min-width: 1200px) {
@@ -47,10 +75,6 @@ h2 {
 
 h2.centered {
     text-align: center;
-}
-
-main {
-    background: $background;
 }
 
 section.paragraph {
