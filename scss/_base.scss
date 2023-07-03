@@ -54,7 +54,7 @@ main {
 .container {
     margin: 0 auto;
     padding: 1rem;
-    width: 90%;
+    width: 100%;
 
     @media (max-width: 768px) {
         font-size: 14px;
@@ -62,8 +62,8 @@ main {
     }
 
     @media (min-width: 1200px) {
-        font-size: 18px;
         max-width: 1080px;
+        font-size: 18px;
     }
 }
 

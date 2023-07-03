@@ -1,5 +1,6 @@
 .header {
     height: 70vh;
+    animation: all 1s ease-in-out;
 
     @media (max-width:768px) {
         height: 30vh;
@@ -11,24 +12,25 @@
 
     &.dynamic {
         position: fixed;
+        background: url('../images/Imagem\ de\ fundo.png') no-repeat fixed;
         top: 0;
         width: 100%;
-        background: rgba(0, 0, 0, 0.1);
-        height: max-content;
-        transform: translateY(-100%);
-        opacity: 0;
-        transition: all .3s ease;
+        height: 8vh;
+        z-index: 998;
 
         @media (max-width:768px) {
             display: none;
         }
 
-        .logo {
-            display: none;
+        .logo-menor {
+            opacity: 0;
+            transition: all .3s ease;
+            width: 2rem;
+            aspect-ratio: 1/1;
+            border-radius: $border;
         }
 
-        &.active {
-            transform: translateY(0);
+        &.active .logo-menor {
             opacity: 1;
         }
     }
@@ -36,10 +38,12 @@
     .container {
         display: flex;
         position: relative;
-        padding-top: 1.2rem;
+        padding: .8rem 0;
         height: 100%;
 
         @media (max-width:768px) {
+            justify-content: space-between;
+            align-items: center;
             padding-top: 2.2rem;
             width: 100%;
         }
@@ -50,17 +54,17 @@
             right: 0;
             color: $color;
             text-align: center;
-            padding: 1rem;
+            padding: .5rem;
             margin: 1rem 1rem 0 0;
-            font-size: 1.2rem;
             background: rgba(0, 0, 0, 0.8);
             border-radius: $border;
             transition: all .3s ease;
             display: none;
             z-index: 999;
+            cursor: pointer;
 
             @media (max-width:768px) {
-                display: block;
+                display: flex;
             }
 
             &:hover {
@@ -79,13 +83,19 @@
                 position: fixed;
                 top: 0;
                 left: 0;
+                justify-content: flex-start;
                 flex-direction: column;
                 margin-left: unset;
                 padding: 5rem 1rem 1rem;
                 width: 100%;
-                z-index: 99;
+                z-index: 998;
                 background: $background;
                 display: none;
+                height: 100vh;
+
+                a {
+                    padding: .6rem 2rem;
+                }
 
                 &.active {
                     display: flex;
