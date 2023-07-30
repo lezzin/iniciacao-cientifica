@@ -145,7 +145,6 @@ body {
 body {
   opacity: 0;
   animation: fade 1s ease-in forwards;
-  background: url("../images/Imagem de fundo.png") no-repeat fixed;
   font-family: "Mulish", sans-serif;
   font-size: 16px;
 }
@@ -160,14 +159,9 @@ body {
   }
 }
 
-.bg {
-  background-color: #f5f5f5;
-}
-
 main {
-  background: rgb(0, 0, 0);
-  background: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 20%);
   padding-bottom: 3rem;
+  background: #f5f5f5;
 }
 @media (max-width: 768px) {
   main {
@@ -177,11 +171,12 @@ main {
 
 .container {
   margin: 0 auto;
-  padding: 1rem;
+  padding: 1rem 0;
   width: 100%;
 }
 @media (max-width: 768px) {
   .container {
+    padding: 1rem;
     font-size: 14px;
     width: 100%;
   }
@@ -218,6 +213,8 @@ section.paragraph {
 .header {
   height: 70vh;
   animation: all 1s ease-in-out;
+  background: url("../images/background.jpg") no-repeat fixed;
+  background-size: cover;
 }
 @media (max-width: 768px) {
   .header {
@@ -228,12 +225,17 @@ section.paragraph {
   height: 30vh;
 }
 .header.dynamic {
+  background: #f5f5f5;
   position: fixed;
-  background: url("../images/Imagem de fundo.png") no-repeat fixed;
+  transform: translateY(-50%);
   top: 0;
   width: 100%;
   height: 8vh;
   z-index: 998;
+  opacity: 0;
+  transition: all 0.3s ease;
+  pointer-events: none;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
 }
 @media (max-width: 768px) {
   .header.dynamic {
@@ -241,14 +243,14 @@ section.paragraph {
   }
 }
 .header.dynamic .logo-menor {
-  opacity: 0;
-  transition: all 0.3s ease;
   width: 2rem;
   aspect-ratio: 1/1;
-  border-radius: 4px;
+  border-radius: 0.25rem;
 }
-.header.dynamic.active .logo-menor {
+.header.dynamic.active {
+  transform: translateY(0);
   opacity: 1;
+  pointer-events: auto;
 }
 .header .container {
   display: flex;
@@ -273,7 +275,7 @@ section.paragraph {
   padding: 0.5rem;
   margin: 1rem 1rem 0 0;
   background: rgba(0, 0, 0, 0.8);
-  border-radius: 4px;
+  border-radius: 0.25rem;
   transition: all 0.3s ease;
   display: none;
   z-index: 999;
@@ -302,7 +304,7 @@ section.paragraph {
     justify-content: flex-start;
     flex-direction: column;
     margin-left: unset;
-    padding: 5rem 1rem 1rem;
+    padding: 0.6rem 2rem;
     width: 100%;
     z-index: 998;
     background: #f5f5f5;
@@ -310,7 +312,7 @@ section.paragraph {
     height: 100vh;
   }
   .header .container nav a {
-    padding: 0.6rem 2rem;
+    padding: 5rem 1rem 1rem;
   }
   .header .container nav.active {
     display: flex;
@@ -322,7 +324,7 @@ section.paragraph {
   padding: 0.3rem 1rem;
   font-size: 1.2rem;
   background: rgba(0, 0, 0, 0.8);
-  border-radius: 4px;
+  border-radius: 0.25rem;
   transition: all 0.3s ease;
 }
 @media (max-width: 768px) {
@@ -339,7 +341,7 @@ section.paragraph {
   font-size: 2.4rem;
   font-weight: 700;
   background: #f5f5f5;
-  border-radius: 4px 4px 0 0;
+  border-radius: 0.25rem 0.25rem 0 0;
   bottom: 0;
   left: 0;
 }
@@ -416,7 +418,7 @@ main section.institutions .card-group {
 }
 main section.institutions .card-group .card {
   background-color: #fff;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   aspect-ratio: 1;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.015);
   padding: 0.2rem;
@@ -443,11 +445,13 @@ main section.institutions .card-group .card div .contact-item {
 }
 
 #map-page {
-  background: none;
+  background: url("../images/background.jpg") no-repeat fixed;
+  background-size: cover;
+  min-height: 70vh;
 }
 #map-page .map-container {
   position: absolute;
-  top: 50%;
+  top: 52%;
   left: 50%;
   transform: translate(-50%, -50%);
   max-width: 1080px;
@@ -468,10 +472,9 @@ main section.institutions .card-group .card div .contact-item {
   width: 2rem;
   height: 2rem;
   z-index: 999;
-  background: rgba(0, 0, 0, 0.3);
   color: #fff;
   margin: 0.6rem;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   cursor: pointer;
   transition: 0.3s ease;
 }
@@ -481,8 +484,8 @@ main section.institutions .card-group .card div .contact-item {
 #map-page .map-container #map {
   width: 100%;
   height: 100%;
-  background-color: #000;
-  border-radius: 4px;
+  background-color: #111;
+  border-radius: 0.25rem;
 }
 
 .articles {
@@ -498,7 +501,7 @@ main section.institutions .card-group .card div .contact-item {
   background: #fff;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.015);
   transition: 0.5s ease;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   padding: 1rem;
   gap: 1rem;
 }
@@ -523,13 +526,10 @@ main section.institutions .card-group .card div .contact-item {
 }
 .books_book {
   position: relative;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   overflow: hidden;
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.015);
   transition: 0.5s ease;
-}
-.books_book:hover {
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.075);
 }
 .books_book:hover img {
   transform: scale(1.01);
@@ -589,7 +589,7 @@ main section.institutions .card-group .card div .contact-item {
      object-fit: cover;
   display: inline-block;
   vertical-align: middle;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   opacity: 0.93;
   transition: opacity 0.3s ease;
 }

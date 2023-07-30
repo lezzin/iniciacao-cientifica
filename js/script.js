@@ -3,8 +3,11 @@
 var header = document.querySelector(".header.dynamic");
 
 if (header) {
+    var currentPagesHme = location.href.includes("index.html");
+    var number = currentPagesHme ? 400 : 150;
+
     addEventListener("scroll", () => {
-        (scrollY > 400) ? header.classList.add("active") : header.classList.remove("active");
+        (scrollY > number) ? header.classList.add("active") : header.classList.remove("active");
     })
 }
 
