@@ -476,6 +476,7 @@ main section.institutions .card-group .card div .contact-item {
   margin: 0.6rem;
   border-radius: 0.25rem;
   cursor: pointer;
+  background: rgba(0, 0, 0, .25);
   transition: 0.3s ease;
 }
 #map-page .map-container button:hover {
