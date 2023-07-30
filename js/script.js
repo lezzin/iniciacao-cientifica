@@ -1,19 +1,21 @@
 "use strict";
 
-var header = document.querySelector(".header.dynamic");
+document.addEventListener("DOMContentLoaded", () => {
+  const header = document.querySelector(".header.dynamic");
 
-if (header) {
-    var currentPageHome = location.href.includes("index.html") || !location.href.includes("html");
-    var number = currentPageHome ? 400 : 150;
+  if (header) {
+    const isHomePage = location.pathname.includes("index.html") || !location.pathname.includes(".html");
+    const scrollThreshold = isHomePage ? 400 : 150;
 
-    addEventListener("scroll", () => {
-        (scrollY > number) ? header.classList.add("active") : header.classList.remove("active");
-    })
-}
+    window.addEventListener("scroll", () => {
+      header.classList.toggle("active", scrollY > scrollThreshold);
+    });
+  }
 
-var btn = document.querySelector("#btn");
+  const btn = document.querySelector("#btn");
 
-if (btn) {
-    var menu = document.querySelector("nav");
+  if (btn) {
+    const menu = document.querySelector("nav");
     btn.addEventListener("click", () => menu.classList.toggle("active"));
-}
+  }
+});
