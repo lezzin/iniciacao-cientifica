@@ -71,7 +71,7 @@
       width: 60vh;
       height: 100vh;
       pointer-events: none;
-      transform: translateX(50%);
+      transform: translateX(-50%);
       transition: all .6s ease;
    }
 
