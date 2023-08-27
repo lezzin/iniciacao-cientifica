@@ -1,0 +1,122 @@
+@import url(../base.css);
+@import url(../reset.css);
+@import url(../components.css);
+
+.presentation {
+   padding: 1rem 6.5rem;
+   color: #999;
+   font-size: 1.2rem;
+   font-style: italic;
+}
+
+@media (max-width: 768px) {
+   .presentation {
+      padding: 1rem;
+   }
+}
+
+section.hero-section {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: 4rem;
+}
+
+@media (max-width: 768px) {
+   section.hero-section {
+      flex-direction: column;
+   }
+
+   section.hero-section>div {
+      padding: 0 0.5rem;
+   }
+}
+
+section.hero-section>div {
+   flex: 1;
+}
+
+section.hero-section .text-container {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: flex-start;
+   padding: 0 5rem;
+   width: 100%;
+   height: 100%;
+}
+
+@media (max-width: 768px) {
+   section.hero-section .text-container {
+      padding: 1rem;
+   }
+}
+
+section.hero-section .text-container h2 {
+   margin-bottom: 1rem;
+   font-size: 2rem;
+   font-weight: bold;
+   color: #3AAA38;
+}
+
+section.hero-section .text-container p {
+   font-size: 1rem;
+}
+
+section.hero-section .text-container p:not(:last-child) {
+   margin-bottom: 0.8rem;
+}
+
+.institutions {
+   text-align: center;
+}
+
+.institutions h2 {
+   margin-top: 4rem;
+   margin-bottom: 1rem;
+}
+
+.institutions .card-group {
+   display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(305px, 1fr));
+   gap: 1.2rem;
+}
+
+@media (max-width: 768px) {
+   .institutions .card-group {
+      padding: 1rem;
+   }
+}
+
+.institutions .card-group .card {
+   background-color: #fff;
+   border-radius: 0.25rem;
+   aspect-ratio: 1;
+   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.015);
+   padding: 0.2rem;
+   transition: 0.5s ease;
+}
+
+.institutions .card-group .card img {
+   width: 100%;
+}
+
+.institutions .card-group .card:hover {
+   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+}
+
+.institutions .card-group .card div {
+   margin: 1rem;
+   text-align: left;
+   color: #3AAA38;
+}
+
+.institutions .card-group .card div h3 {
+   margin-bottom: 1rem;
+   font-weight: 700;
+   font-size: 1.4rem;
+}
+
+.institutions .card-group .card div .contact-item {
+   font-size: 1.2rem;
+}

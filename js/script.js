@@ -1,21 +1,21 @@
 "use strict";
 
 document.addEventListener("DOMContentLoaded", () => {
-  const header = document.querySelector(".header.dynamic");
+   const header = document.querySelector(".header.dynamic");
 
-  if (header) {
-    const isHomePage = location.pathname.includes("index.html") || !location.pathname.includes(".html");
-    const scrollThreshold = isHomePage ? 400 : 150;
+   if (header) {
+      const isHomePage = location.pathname.includes("index.html") || !location.pathname.includes(".html");
+      const scrollThreshold = isHomePage ? 400 : 150;
 
-    window.addEventListener("scroll", () => {
-      header.classList.toggle("active", scrollY > scrollThreshold);
-    });
-  }
+      window.addEventListener("scroll", () => {
+         header.classList.toggle("active", scrollY > scrollThreshold);
+      });
+   }
 
-  const btn = document.querySelector("#btn");
+   const btn = document.querySelector("#btn");
 
-  if (btn) {
-    const menu = document.querySelector("nav");
-    btn.addEventListener("click", () => menu.classList.toggle("active"));
-  }
+   if (btn) {
+      const menu = document.querySelector(".header nav");
+      btn.addEventListener("click", () => menu.classList.toggle("active"));
+   }
 });
