@@ -1,5 +1,6 @@
 const books = document.querySelectorAll(".books_book");
 const modal = document.querySelector(".book-modal-container");
+const body = document.querySelector("body");
 
 const booksList = [
     {
@@ -93,10 +94,12 @@ function setModalHTML(bookName) {
 
     const modalClose = document.querySelector(".modal .close-btn");
     modalClose.addEventListener("click", () => {
+        body.classList.remove("modal-active");
         modal.classList.remove("active");
     })
 
     modal.classList.add("active");
+    body.classList.add("modal-active");
 }
 
 books.forEach(book => {
