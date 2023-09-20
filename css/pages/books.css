@@ -66,6 +66,10 @@
     opacity: 0;
 }
 
+body.modal-active {
+    overflow: hidden;
+}
+
 .book-modal-container.active {
     pointer-events: all;
     opacity: 1;
