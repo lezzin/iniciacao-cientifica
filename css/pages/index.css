@@ -130,23 +130,30 @@
 .navigation .container {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 2rem;
 }
 
 .navigation .container .nav-item {
     display: flex;
     flex-direction: column;
-    align-items: start;
-    gap: 0.5rem;
+    align-items: center;
+    text-align: center;
+    gap: 0.6rem;
 
     max-width: 70%;
+}
+
+@media (max-width: 768px) {
+    .navigation .container .nav-item {
+        max-width: unset;
+    }
 }
 
 .navigation a {
     color: #f5f5f5;
     text-align: center;
     padding: .6rem;
-    font-size: 1.2rem;
     background: rgba(0, 0, 0, 0.8);
     border-radius: 0.25rem;
     transition: all 0.3s ease;

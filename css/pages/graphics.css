@@ -1,0 +1,45 @@
+@import url(../base.css);
+@import url(../reset.css);
+@import url(../components.css);
+
+.container h3 {
+    margin-bottom: 0.5rem;
+}
+
+.paragraph {
+    margin-bottom: 1rem;
+}
+
+.graphics h3 {
+    margin-bottom: 1rem;
+}
+
+
+.graphics .card-group {
+    display: grid;
+    gap: 1rem;
+}
+
+
+.graphics .graphic {
+    background: #fff;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.015);
+    padding: 2rem 1rem;
+    transition: all 0.3s ease;
+    border-radius: .25rem;
+    text-align: center;
+}
+
+.graphics .graphic:hover {
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+}
+
+.graphics .graphic figcaption {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: .9rem;
+}
+
+.graphics footer {
+    margin-top: .6rem;
+}
