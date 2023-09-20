@@ -30,6 +30,12 @@
     text-align: center;
 }
 
+@media (max-width: 768px) {
+    .graphics .graphic {
+        text-align: center;
+    }
+}
+
 .graphics .graphic:hover {
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
 }
