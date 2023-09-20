@@ -59,6 +59,12 @@
     margin-bottom: 1rem;
 }
 
+@media (max-width: 768px) {
+    .institutions h3 {
+        text-align: center;
+    }
+}
+
 .institutions .card-group {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(305px, 1fr));
