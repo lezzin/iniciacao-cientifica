@@ -32,7 +32,7 @@
 
 @media (max-width: 768px) {
     .graphics .graphic {
-        text-align: center;
+        text-align: left;
     }
 }
 
