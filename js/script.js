@@ -13,5 +13,7 @@ const btn = document.querySelector("#btn");
 
 if (btn) {
     const menu = document.querySelector(".header nav");
+    const link = menu.querySelector("a");
     btn.addEventListener("click", () => menu.classList.toggle("active"));
+    link.addEventListener("click", () => menu.classList.remove("active"));
 }
