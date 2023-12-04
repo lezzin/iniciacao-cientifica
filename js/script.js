@@ -18,6 +18,6 @@ if (btn) {
     btn.addEventListener("click", () => menu.classList.toggle("active"));
     links.forEach(function(link) {
         link.addEventListener("click", () => menu.classList.remove("active"));
-    }
+    });
 }
                   
