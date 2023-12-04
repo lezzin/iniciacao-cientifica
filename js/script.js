@@ -14,8 +14,9 @@ const btn = document.querySelector("#btn");
 if (btn) {
     const menu = document.querySelector(".header nav");
     const links = menu.querySelectorAll("a");
+    
     btn.addEventListener("click", () => menu.classList.toggle("active"));
-    links.forEach(link => {
+    links.forEach(function(link) {
         link.addEventListener("click", () => menu.classList.remove("active"));
     }
 }
