@@ -193,6 +193,7 @@
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 996;
     height: min-content;
     opacity: 0;
     transition: all 0.3s ease;
