@@ -1,3 +1,5 @@
+const loader = document.querySelector(".loader-container");
+
 const headerMenu = document.querySelector(".header nav");
 const linkToTop = document.querySelector(".link-to-top");
 
@@ -21,3 +23,11 @@ linkToTop.addEventListener("click", () => {
         behavior: "smooth"
     });
 });
+
+window.addEventListener("DOMContentLoaded", () => {
+    loader.classList.add("hidden");
+
+    setTimeout(() => {
+        loader.remove();
+    }, 500);
+})
