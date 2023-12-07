@@ -92,6 +92,7 @@
     transition: all 0.3s ease;
     display: none;
     z-index: 998;
+    font-size: 1.6rem;
     cursor: pointer;
 }
 
