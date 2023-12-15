@@ -15,3 +15,9 @@ Basta abrir o arquivo `index.html` em um navegador da web. O aplicativo é total
 
 Hospedagem:<br>
 Basta acessar o link: [clique aqui para acessar](https://iniciacao-cientifica.vercel.app/)
+
+## Tecnologias utilizadas:
+
+* HTML
+* CSS
+* JavaScript
