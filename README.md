@@ -1,12 +1,10 @@
 ![Foto do projeto](https://github.com/lezzin/iniciacao_cientifica/assets/103830032/0f5e4864-dabe-4c1d-9a07-dbc4d9bc8c09)
 
+# Iniciacao Cientifica
+
 Um aplicativo web simples a respeito da situação do estado do Amazonas em relação ao transporte e segurança alimentícia. construído com HTML, CSS e JavaScript.
 
-## Recursos
-
-- Não possui recursos, apenas informações estáticas.
-
-## Começando
+## Guia de instalação
 
 Para usar o aplicativo do projeto de pesquisa:
 
