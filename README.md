@@ -2,11 +2,11 @@
 
 # Iniciacao Cientifica
 
-Um aplicativo web simples a respeito da situação do estado do Amazonas em relação ao transporte e segurança alimentícia. construído com HTML, CSS e JavaScript.
+Um projeto de Iniciação Científica na qual participei em conjunto com alunos do curso Técnico em Alimentos. Minha responsabilidade foi de expor os dados encontrados referentes à pesquisa realizada por esses alunos através de um website.
 
 ## Guia de instalação
 
-Para usar o aplicativo do projeto de pesquisa:
+Para acessar o website:
 
 Localmente:<br>
 Basta baixar a pasta do projeto e abrir o arquivo `index.html` em um navegador da web. O aplicativo é totalmente do lado do cliente e não requer nenhuma configuração de servidor.
