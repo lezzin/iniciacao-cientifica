@@ -1,3 +1,5 @@
+![Iniciação Científica](https://github.com/lezzin/iniciacao_cientifica/assets/103830032/511f4bdf-ee9b-41c4-9bf3-09beb54e6bd4)
+
 # Falta de Mobilidade Alimentícia e Insegurança Alimentar no Brasil: Um Estudo de Caso do Estado do Amazonas
 
 Este projeto de Iniciação Científica foi realizado em colaboração com alunos do curso Técnico em Alimentos, com o objetivo de investigar a falta de mobilidade alimentícia e a insegurança alimentar no Brasil, com foco especial no estado do Amazonas.
