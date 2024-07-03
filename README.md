@@ -1,4 +1,4 @@
-<h1 align="center"> 🚀 <br> Falta de Mobilidade Alimentícia e Insegurança Alimentar no Brasil: Um Estudo de Caso do Estado do Amazonas</h1>
+<h1 align="center"> 🍎 <br> Falta de Mobilidade Alimentícia e Insegurança Alimentar no Brasil: Um Estudo de Caso do Estado do Amazonas</h1>
 
 ![Iniciação Científica](https://github.com/lezzin/iniciacao_cientifica/assets/103830032/511f4bdf-ee9b-41c4-9bf3-09beb54e6bd4)
 
